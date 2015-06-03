@@ -98,19 +98,12 @@ def sum_matrix(matr):
 
 
 def sum_matrix2(matr):
-    # Using list comprehensions
     return sum([sum(row) for row in matr])
 
-
-# We are centered at 4.
-# How to move to get to 4's neighbors
-# 1      2     3
-# 8     >4<    7
-# 9      5     6
 NEIGHBORS = [
-    (-1, -1), (0, -1), (1, -1),  # Get to 1, 2 and 3
-    (-1, 0), (1, 0),  # Get to 8 and 7
-    (-1, 1), (0, 1), (1, 1)]  # Get to 9, 5 and 6
+    (-1, -1), (0, -1), (1, -1),
+    (-1, 0), (1, 0),
+    (-1, 1), (0, 1), (1, 1)]
 
 
 def within_bounds(m, at):
@@ -135,7 +128,6 @@ def bomb(m, at):
 
         if within_bounds(m, position):
             position_value = m[position[dx]][position[dy]]
-            # This min() is not to go less than zero
             m[position[dx]][position[dy]] -= min(target_value, position_value)
 
     return m
@@ -161,4 +153,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

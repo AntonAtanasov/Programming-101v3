@@ -263,15 +263,12 @@ def goldbach(n):
 def magic_square(matrix):
     s = []
 
-    # Sum of rows:
     for row in matrix:
         s.append(sum(row))
-    
-    # Sum of columns:
+
     for i in range(0, len(matrix)):
         s.append(sum([row[i] for row in matrix]))
-    
-    # Sum of diagonals:
+
     s.append(sum([matrix[i][i] for i in range(len(matrix))]))
 
     i = 0
@@ -285,6 +282,8 @@ def magic_square(matrix):
 
 
 FRIDAY_INDEX = 4
+
+
 def friday_years(start, end):
     count_friday_years = 0
 

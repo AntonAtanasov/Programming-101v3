@@ -32,13 +32,11 @@ def to_digits(n):
     return [int(x) for x in str(n)]
 
 
-# 145  = 1! + 4! + 5!
 def factorial_digits(n):
     return sum([factorial(x) for x in to_digits(n)])
 
 
 def palindrome(obj):
-    # list slicing
     return str(obj)[::-1] == str(obj)
 
 

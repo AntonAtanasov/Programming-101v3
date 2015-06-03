@@ -23,7 +23,6 @@ class Bill:
     def __hash__(self):
         return hash(self.__str__())
 
-    # Used for sorting
     def __lt__(self, other):
         return int(self) < int(other)
 
